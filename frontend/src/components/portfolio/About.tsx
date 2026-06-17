@@ -1,4 +1,4 @@
-import { Sparkles, Code2, Rocket } from "lucide-react";
+import { Code2, Rocket } from "lucide-react";
 
 const values = [
   // {

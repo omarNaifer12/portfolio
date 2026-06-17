@@ -1,5 +1,5 @@
 import { useState } from "react";
-import {  ExternalLink, Play, ImageIcon } from "lucide-react";
+import {  ImageIcon } from "lucide-react";
 import { ImageGallery } from "./ImageGallery";
 import { doctorAppointmentsImages, foodDeliveryImages, khademnyImages, licenseScreenshots } from "@/lib/images";
 
@@ -149,7 +149,7 @@ export const Projects = () => {
 };
 
 const ProjectCard = ({ project, index }: { project: Project; index: number }) => {
-  const [tab, setTab] = useState<"image" | "video">("image");
+  const [tab,] = useState<"image" | "video">("image");
 
   return (
     <article
