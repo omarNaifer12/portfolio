@@ -7,7 +7,7 @@ import { doctorAppointmentsImages, foodDeliveryImages, khademnyImages, licenseSc
 type Project = {
   title: string;
   description: string;
-  longDescription: string;
+  longDescription: string[];
   tags: string[];
   github: string;
   live: string;
@@ -15,20 +15,20 @@ type Project = {
   videoUrl: string;
   videoType: "mp4" | "youtube";
 };
-// const drivingLicense:string[]=[
-//   "Implemented the complete driving license lifecycle workflow, including application submission, mandatory test phases, license issuance, renewals, replacements, and detained license handling.",
-// "Designed and implemented a layered (3-tier) architecture consisting of Presentation (React), Business Logic, and Data Access layers.",
-// "Developed and maintained RESTful APIs in C# to handle core system operations.",
-// "Built React.js user interfaces with Redux state management, and created reusable frontend components."
-// ]
+
 const projects: Project[] = [
   {
     title: "Driving License Management System",
     description:
-      "A full-stack system that digitizes and manages driving license workflows, from testing to issuance and renewal.",
+      "Full-stack project simulating a driving license management workflow using a structured 3-tier architecture.",
     longDescription:
-      "Converted a desktop application built with a 3-tier architecture into a modern web application. The system manages the complete driving license lifecycle, including user registration, mandatory testing phases, license issuance, and international license applications. It also supports license renewals, replacements for lost or damaged licenses, and handling detained licenses with structured release workflows. Built with a focus on clean architecture, maintainability, and smooth user experience.",
-    tags: ["React", "Redux", "C#", "ADO.NET", "SQL Server"],
+      [
+  `Built workflow for obtaining a local driving license through appointment scheduling and mandatory testing phases, with progression to international license applications.`,
+`Implemented license renewal, replacement (lost or damaged), and detained license release workflows.`,
+"Developed administrative features for managing people, users, and license-related applications.",
+"Designed and applied a 3-tier architecture consisting of Presentation, Business Logic, and Data Access layers.",
+"Built reusable React.js components and managed application state using Redux."
+],    tags: ["React", "Redux", "C#", "ADO.NET", "SQL Server"],
         github: "https://github.com/omarNaifer12/Driving-License-Management",
     live: "https://nova.example.com",
     screenshots: licenseScreenshots,
@@ -36,12 +36,16 @@ const projects: Project[] = [
     videoType: "mp4"
   },
  {
-  title: "Khademny",
+  title: "Khademni",
   description:
-    "A mobile platform that connects users with laborers and service providers, featuring job posting, real-time messaging, notifications, and appointment management.",
+    "A team-built mobile application connecting users with laborers and service providers across multiple service categories.",
     
   longDescription:
-    "Developed a full-stack mobile application that connects users with laborers and service providers across different fields such as electrical work, plumbing, mechanics, and home maintenance. Users can create job posts requesting services, browse laborer profiles, communicate through real-time messaging, and rate laborers based on completed work. Laborers can create and manage their own profiles, search for available jobs, receive real-time notifications about new opportunities, manage appointments, and interact directly with users through an integrated chat system.",
+    [`Created laborer profiles that allow users to search for jobs, receive real-time notifications about job opportunities, and manage appointments from their accounts`,
+`Implemented a rating system for users to evaluate laborers and a job posting feature for service requests.`,
+`Integrated a real-time messaging feature for seamless communication between users and laborers.`
+
+    ],
 
   tags: ["React Native", "Node.js", "Express.js", "MySQL","JWT","Socket.IO"],
 
@@ -59,10 +63,15 @@ const projects: Project[] = [
   title: "Doctor-Appointments-Booking-System",
 
   description:
-    "Full-stack doctor appointment booking platform with multi-role authentication and flexible payment options.",
+    "Full-stack doctor appointment booking platform with multi-user authentication and flexible payment options.",
 
   longDescription:
-    "A complete MERN stack doctor appointment booking system built for hospitals and clinics. Patients can register, book appointments, manage schedules, and choose between online PayPal payments or on-site payment methods. Doctors can manage appointments, update profiles, and track earnings through a dedicated dashboard. Admins can oversee doctors, appointments, and platform operations through a secure admin panel. The application features role-based authentication, responsive UI, and appointment management dashboards for patients, doctors, and administrators.",
+  [`Built a multi-user system for Patients, Doctors, and Admins with JWT-based authentication and protected routes.`,
+`Enabled patients to register, browse doctors, book appointments, and manage their schedules.`,
+`Integrated flexible payment options including PayPal online payments and on-site payment support.`,
+`Implemented appointment management system for doctors with profile updates, scheduling, and booking control.`,
+
+`Developed an admin dashboard to manage users, doctors, and overall system operations.`],
 
   tags: [
     "React.js",
@@ -71,6 +80,7 @@ const projects: Project[] = [
     "MongoDB",
     "JWT",
     "PayPal",
+
   ],
 
   github: "https://github.com/omarNaifer12/Doctor-Appointments-Booking-System#",
@@ -87,11 +97,12 @@ const projects: Project[] = [
   title: "Food Delivery",
 
   description:
-    "Full-stack food ordering platform with authentication, cart system, and Stripe payment integration.",
+    "Full-stack food ordering web application with a cart system and Stripe payment integration.",
 
   longDescription:
-    "A complete full-stack food delivery web application built using the MERN stack. It includes a customer-facing website, an admin dashboard, and a secure backend API. Users can register, log in, browse food items, add products to a shopping cart, and place orders securely. The system supports Stripe payment integration for online checkout and also allows order tracking with real-time status updates managed by the admin panel. Admins can add, update, and manage food items as well as monitor all customer orders through a dedicated dashboard.",
-
+    [`Developed a food delivery app with features that allow users 
+to  add food items to their cart and purchase them using payment integration.`,`Enabled admins to manage food items, track orders, and monitor
+deliveries.`],
   tags: [
     "React",
     "Node.js",
@@ -121,14 +132,10 @@ export const Projects = () => {
               / Projects
             </p>
             <h2 className="text-4xl md:text-5xl font-bold">
-              Recent <span className="text-gradient-violet">projects.</span>
+               Projects I've  <span className="text-gradient-violet">built</span>
             </h2>
           </div>
-          <p className="text-muted-foreground max-w-md">
-             Each card has links to the repo,
-            screenshots.
-            {/* and a video walkthrough. */}
-          </p>
+         
         </div>
 
         <div className="space-y-10">
@@ -200,8 +207,15 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
         </div>
         <h3 className="text-3xl md:text-4xl font-bold">{project.title}</h3>
         <p className="text-lg text-foreground/90">{project.description}</p>
-        <p className="text-muted-foreground leading-relaxed">{project.longDescription}</p>
+        <ul className="list-disc pl-5 space-y-2">
+ {
+  project.longDescription.map((desc:any)=>{
+    return <li>{desc}</li>
+  })
 
+        }
+        </ul>
+       
         <div className="flex flex-wrap gap-2">
           {project.tags.map((t) => (
             <span

@@ -12,31 +12,26 @@ export const Hero = () => {
         <div className="md:col-span-8 space-y-8">
           <div className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary/60 px-4 py-1.5 text-xs font-medium">
             <span className="h-2 w-2 rounded-full bg-primary animate-pulse" />
-            Available for freelance & full-time
+            Available for new opportunities
           </div>
 
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-[0.95]">
-            Building 
-            <br />
-            <span className="text-gradient">reliable </span>
-            <br />
-            web and mobile <span className="text-gradient-violet italic"> applications.</span>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-[0.95]">
+            Building   
+            <span className="text-gradient"> reliable </span>
+            web <br/> and mobile <span className="text-gradient-violet italic"> applications</span>
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl">
-            Full-stack developer building web and mobile applications using React, Node.js, and React Native. Experienced in developing complete products across the stack, from frontend interfaces and backend APIs to authentication, databases, and real-time features.
+           Full-stack developer building web and mobile applications using React, Node.js, and React Native. I enjoy turning ideas into working products, from frontend interfaces and backend APIs to database design and system structure. <br></br>
 
-Worked as a freelance developer on a mobile application with a small team, collaborating in client meetings, implementing feature updates, and contributing to the delivery of production-ready solutions.
-
-Also contributed to large open-source projects, gaining experience reading and navigating large codebases, following established architectures, and writing clean, maintainable code through collaborative code reviews and real-world development practices.
-          </p>
+I've worked on a freelance project within a small team, where I contributed to full-stack feature development, collaborated with the client, and improved the application based on feedback. I've also contributed to a large open-source project, which helped me improve my ability to work with large codebases, follow established patterns, and write clean, maintainable code.          </p>
 
           <div className="flex flex-wrap items-center gap-4">
             <a
-              href="#projects"
+              href="#opensource"
               className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 font-semibold text-primary-foreground hover:shadow-glow transition-all hover:-translate-y-0.5"
             >
-              View my work <ArrowDown size={16} />
+              View My Projects & Open Source <ArrowDown size={16} />
             </a>
             <a
               href="#contact"

@@ -1,15 +1,19 @@
 const stacks = [
   {
     title: "Languages",
-    items: ["Javascript", "TypeScript", "C#"],
+    items: ["JavaScript", "TypeScript", "C#"],
   },
   {
     title: "Frontend",
-    items: ["React","Html","Css","React native"],
+    items: ["React","HTML","CSS","React native"],
   },
   {
     title: "Backend",
-    items: ["Node.js", "Express", "Mysql", "Sequelize", "MongoDb","ADO.NET"],
+    items: ["Node.js", "Express", "Sequelize","ADO.NET"],
+  },
+  {
+    title: "Databases",
+    items: ["MySQL", "MongoDb"],
   },
   // {
   //   title: "Tools & Cloud",
@@ -26,7 +30,7 @@ export const Tech = () => {
             / tech stack
           </p>
           <h2 className="text-4xl md:text-5xl font-bold">
-            Technologies and tools  <span className="text-gradient">I work with.</span>
+            Technologies and tools  <span className="text-gradient">I work with</span>
           </h2>
         </div>
 

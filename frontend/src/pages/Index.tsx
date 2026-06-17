@@ -1,6 +1,6 @@
 import { Navbar } from "@/components/portfolio/Navbar";
 import { Hero } from "@/components/portfolio/Hero";
-import { About } from "@/components/portfolio/About";
+// import { About } from "@/components/portfolio/About";
 import { Tech } from "@/components/portfolio/Tech";
 import { Projects } from "@/components/portfolio/Projects";
 import { Contact } from "@/components/portfolio/Contact";
@@ -11,6 +11,7 @@ const Index = () => {
     <main className="min-h-screen">
       <Navbar />
       <Hero />
+      {/* <About/> */}
       <Tech />
       <OpenSource/>
       <Projects />

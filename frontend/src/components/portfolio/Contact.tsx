@@ -18,8 +18,7 @@ export const Contact = () => {
               <span className="text-gradient">Let's build it together.</span>
             </h2>
             <p className="text-lg text-muted-foreground">
-              I'm currently taking on new freelance and full-time opportunities. Drop me a line and
-              I'll get back within 24 hours.
+            I'm open to new opportunities. Feel free to reach out — I'll respond within 24 hours.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
               <a

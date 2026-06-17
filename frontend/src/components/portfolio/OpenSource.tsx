@@ -58,15 +58,16 @@ export const OpenSource = () => {
     rel="noreferrer"
     className="text-gradient-violet inline-flex items-center gap-2 hover:opacity-80 transition-opacity"
   >
-    Twenty CRM.
+    Twenty CRM
     <ExternalLink size={28} className="text-primary" />
   </a>
 </h2>
           </div>
           <p className="text-muted-foreground max-w-xl leading-relaxed">
-            Merged <strong className="text-foreground">16 pull requests</strong> into a
-            production-scale open-source CRM — resolving bugs, building full-stack features, and
-            iterating through maintainer code reviews across a large React &amp; NestJS codebase.
+            Merged <strong className="text-foreground">16 pull requests</strong>  into a 
+            large open-source CRM (React + NestJS), contributing bug fixes and full-stack features 
+            across a production codebase, collaborating with maintainers 
+            through structured code review and feedback cycles. 
           </p>
         </div>
 
