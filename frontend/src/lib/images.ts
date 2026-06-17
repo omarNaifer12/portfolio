@@ -1,14 +1,4 @@
-import img1 from "../assets/all-appointment-admin.png";
-import img2 from "../assets/appointments-user-new.png";
-import img3 from "../assets/appointments-user.png";
-import img4 from "../assets/book-appointment-user.png";
-import img5 from "../assets/dashboard-admin.png";
-import img6 from "../assets/doctor-list.png";
-import img7 from "../assets/user-profile.png";
-import img8 from "../assets/doctor-list.png";
-import img9 from "../assets/appointments-user.png";
-import img10 from "../assets/appointments-user-new.png";
-import img11 from "../assets/book-appointment-user.png";
+
 import add_appointment_test from "../assets/license/add_appointment_test.png";
 import add_local_license1 from "../assets/license/add_local_license1.png";
 import add_local_license2 from "../assets/license/add_local_license2.png";
@@ -58,19 +48,7 @@ export const khademnyImages = [
   messagesListOfUser,
   userWorkerLogin,
 ];
-export const imagesSrc = [
-  img1,
-  img2,
-  img3,
-  img4,
-  img5,
-  img6,
-  img7,
-  img11,
-  img10,
-  img8,
-  img9
-];
+
 export const licenseScreenshots = [
   add_appointment_test,
   add_local_license1,
