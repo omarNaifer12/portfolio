@@ -29,7 +29,7 @@ I've worked on a freelance project within a small team, where I contributed to f
           <div className="flex flex-wrap items-center gap-4">
             <a
               href="#opensource"
-              className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 font-semibold text-primary-foreground hover:shadow-glow transition-all hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-3.5 font-semibold text-primary-foreground hover:shadow-glow transition-all hover:-translate-y-0.5"
             >
               View My Projects & Open Source <ArrowDown size={16} />
             </a>

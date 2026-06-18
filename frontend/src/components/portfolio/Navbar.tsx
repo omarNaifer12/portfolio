@@ -79,19 +79,32 @@ export const Navbar = () => {
       </nav>
 
       {open && (
-        <div className="md:hidden container mt-2 glass rounded-2xl p-4 flex flex-col gap-2">
-          {links.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              onClick={() => setOpen(false)}
-              className="px-4 py-3 rounded-xl hover:bg-secondary"
-            >
-              {l.label}
-            </a>
-          ))}
-        </div>
-      )}
+  <div className="md:hidden container mt-2 glass rounded-2xl p-4 flex flex-col gap-2">
+    {links.map((l) => (
+      <a
+        key={l.href}
+        href={l.href}
+        onClick={() => setOpen(false)}
+        className="px-4 py-3 rounded-xl hover:bg-secondary"
+      >
+        {l.label}
+      </a>
+    ))}
+
+    {/* Resume button — separated at the bottom */}
+    <div className="mt-1 pt-3 border-t border-border">
+      <a
+        href="/myresume.pdf"
+        target="_blank"
+        rel="noreferrer"
+        onClick={() => setOpen(false)}
+        className="flex items-center justify-center gap-2 w-full rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground hover:shadow-glow transition-all"
+      >
+        My Resume
+      </a>
+    </div>
+  </div>
+)}
     </header>
   );
 };
