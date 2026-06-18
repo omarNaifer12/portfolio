@@ -6,15 +6,22 @@ import { ThemeToggle } from "./ThemeToggle";
 
 const links = [
   // { label: "About", href: "#about" },
-  { label: "Tech", href: "#tech" },
-  { label: "Projects", href: "#opensource" },
-  { label: "Contact", href: "#contact" },
+  { label: "Tech", href: "tech" },
+  { label: "Projects", href: "opensource" },
+  { label: "Contact", href: "contact" },
 ];
 
 export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-
+  const scrollToSection = (id:string) => {
+    console.log("enter scrollToSection",id);
+    
+  document.getElementById(id)?.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+  });
+};
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
     window.addEventListener("scroll", onScroll);
@@ -34,7 +41,7 @@ export const Navbar = () => {
           scrolled ? "glass shadow-card" : "bg-transparent"
         )}
       >
-        <a href="#home" className="flex items-center gap-2 font-bold text-lg">
+        <a  className="flex items-center gap-2 font-bold text-lg">
           <span className="grid h-8 w-8 place-items-center rounded-lg bg-gradient-to-br from-primary to-accent text-primary-foreground font-black">
             ◣
           </span>
@@ -44,12 +51,13 @@ export const Navbar = () => {
         <ul className="hidden md:flex items-center gap-1">
           {links.map((l) => (
             <li key={l.href}>
-              <a
-                href={l.href}
+              <button
+            onClick={()=>scrollToSection(l.href)}
+              
                 className="px-4 py-2 rounded-full text-sm text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors"
               >
                 {l.label}
-              </a>
+              </button>
             </li>
           ))}
         </ul>

@@ -1,6 +1,12 @@
 import { ArrowDown, Mail } from "lucide-react";
 
 export const Hero = () => {
+  const scrollToSection = (id:string) => {
+  document.getElementById(id)?.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+  });
+};
   return (
     <section
       id="home"
@@ -27,18 +33,18 @@ export const Hero = () => {
 I've worked on a freelance project within a small team, where I contributed to full-stack feature development, collaborated with the client, and improved the application based on feedback. I've also contributed to a large open-source project, which helped me improve my ability to work with large codebases, follow established patterns, and write clean, maintainable code.          </p>
 
           <div className="flex flex-wrap items-center gap-4">
-            <a
-              href="#opensource"
+            <button
               className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-3.5 font-semibold text-primary-foreground hover:shadow-glow transition-all hover:-translate-y-0.5"
+            onClick={()=>scrollToSection("opensource")}
             >
               View My Projects & Open Source <ArrowDown size={16} />
-            </a>
-            <a
-              href="#contact"
+            </button>
+            <button
+            onClick={()=>scrollToSection("contact")}
               className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary px-7 py-3.5 font-semibold hover:bg-secondary/70 transition-all"
             >
               Get in touch
-            </a>
+            </button>
           </div>
 
           <div className="flex items-center gap-3 pt-4">

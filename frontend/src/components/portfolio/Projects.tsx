@@ -209,8 +209,8 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
         <p className="text-lg text-foreground/90">{project.description}</p>
         <ul className="list-disc pl-5 space-y-2">
  {
-  project.longDescription.map((desc:any)=>{
-    return <li>{desc}</li>
+  project.longDescription.map((desc:any,index)=>{
+    return <li key={index}>{desc}</li>
   })
 
         }

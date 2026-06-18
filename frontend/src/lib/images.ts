@@ -27,15 +27,60 @@ import users_list from "../assets/license/users_list.png";
 
 
 
-import userHome2 from "/khademny/user-home2.jfif";
-import userHome1 from "/khademny/user-home1.jfif";
-import userAddPost from "/khademny/user-add-post.jfif";
-import conversationUserWithWorker from "/khademny/conversation-user-with-worker.jfif";
-import userAllPosts from "/khademny/user-all-posts.jfif";
-import laborerProfile1ToUser from "/khademny/laborer-profile1-to-user.jfif";
-import laborerProfile2ToUser from "/khademny/laborer-profile2-to-user.jfif";
-import messagesListOfUser from "/khademny/messages-list-of-user.jfif";
-import userWorkerLogin from "/khademny/user-worker-login.jfif";
+import userHome2 from "../assets/khademny/user-home2.jfif";
+import userHome1 from "../assets/khademny/user-home1.jfif";
+import userAddPost from "../assets/khademny/user-add-post.jfif";
+import conversationUserWithWorker from "../assets/khademny/conversation-user-with-worker.jfif";
+import userAllPosts from "../assets/khademny/user-all-posts.jfif";
+import laborerProfile1ToUser from "../assets/khademny/laborer-profile1-to-user.jfif";
+import laborerProfile2ToUser from "../assets/khademny/laborer-profile2-to-user.jfif";
+import messagesListOfUser from "../assets/khademny/messages-list-of-user.jfif";
+import userWorkerLogin from "../assets/khademny/user-worker-login.jfif";
+
+
+
+
+
+import adminAddItem from "../assets/food_delivery/admin-add-item.png";
+import allFoodListAdmin from "../assets/food_delivery/all-food-list-admin.png";
+import allFoodsToUsers from "../assets/food_delivery/all-foods-to-users.png";
+import foodsInCard from "../assets/food_delivery/foods-in-the-card.png";
+import proceedOrdersPayment from "../assets/food_delivery/proceed-orders-to-payment.png";
+import totalOrdersAdmin from "../assets/food_delivery/total-orders-to-admin.png";
+import totalOrdersUser from "../assets/food_delivery/total-orders-user.png";
+
+
+
+
+
+
+import bookAppointmentUser from "../assets/doctor_appointments/book-appointment-user.png";
+import homeUser from "../assets/doctor_appointments/home-user.png";
+import filterDoctorUser from "../assets/doctor_appointments/filter-doctor-user.png";
+import appointmentsUser from "../assets/doctor_appointments/appointments-user.png";
+import editProfileDoctor from "../assets/doctor_appointments/edit-profile-doctor.png";
+import appointmentsDoctor from "../assets/doctor_appointments/appointments-doctor.png";
+import dashboardDoctor from "../assets/doctor_appointments/dashboard-doctor.png";
+import dashboardAdmin from "../assets/doctor_appointments/dashboard-admin.png";
+import appointmentsAdmin from "../assets/doctor_appointments/appointments-admin.png";
+import addDoctorAdmin from "../assets/doctor_appointments/add-doctor-admin.png";
+import doctorListAdmin from "../assets/doctor_appointments/doctor-list-admin.png";
+
+export const doctorAppointmentsImages = [
+  bookAppointmentUser,
+  homeUser,
+  filterDoctorUser,
+  appointmentsUser,
+  editProfileDoctor,
+  appointmentsDoctor,
+  dashboardDoctor,
+  dashboardAdmin,
+  appointmentsAdmin,
+  addDoctorAdmin,
+  doctorListAdmin,
+];
+
+
 
 export const khademnyImages = [
   userHome2,
@@ -77,25 +122,13 @@ export const licenseScreenshots = [
   users_list,
 ];
 
+
 export const foodDeliveryImages = [
-  "/food_delivery/admin-add-item.png",
-  "/food_delivery/all-food-list-admin.png",
-  "/food_delivery/all-foods-to-users.png",
-  "/food_delivery/foods-in-the-card.png",
-  "/food_delivery/proceed-orders-to-payment.png",
-  "/food_delivery/total-orders-to-admin.png",
-  "/food_delivery/total-orders-user.png",
-];
-export const doctorAppointmentsImages = [
-  "/doctor_appointments/book-appointment-user.png",
-  "/doctor_appointments/home-user.png",
-  "/doctor_appointments/filter-doctor-user.png",
-  "/doctor_appointments/appointments-user.png",
-  "/doctor_appointments/edit-profile-doctor.png",
-  "/doctor_appointments/appointments-doctor.png",
-  "/doctor_appointments/dashboard-doctor.png",
-  "/doctor_appointments/dashboard-admin.png",
-  "/doctor_appointments/appointments-admin.png",
-  "/doctor_appointments/add-doctor-admin.png",
-  "/doctor_appointments/doctor-list-admin.png",
+  adminAddItem,
+  allFoodListAdmin,
+  allFoodsToUsers,
+  foodsInCard,
+  proceedOrdersPayment,
+  totalOrdersAdmin,
+  totalOrdersUser,
 ];
