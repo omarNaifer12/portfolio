@@ -65,7 +65,7 @@ import dashboardAdmin from "../assets/doctor_appointments/dashboard-admin.png";
 import appointmentsAdmin from "../assets/doctor_appointments/appointments-admin.png";
 import addDoctorAdmin from "../assets/doctor_appointments/add-doctor-admin.png";
 import doctorListAdmin from "../assets/doctor_appointments/doctor-list-admin.png";
-
+import resume from "../assets/myresume.pdf";
 export const doctorAppointmentsImages = [
   bookAppointmentUser,
   homeUser,
@@ -132,3 +132,4 @@ export const foodDeliveryImages = [
   totalOrdersAdmin,
   totalOrdersUser,
 ];
+export const myresume=resume

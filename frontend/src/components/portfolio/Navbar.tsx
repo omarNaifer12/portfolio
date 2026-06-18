@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ThemeToggle } from "./ThemeToggle";
+import { myresume } from "@/lib/images";
 
 
 const links = [
@@ -65,7 +66,7 @@ export const Navbar = () => {
         <div className="hidden md:flex items-center gap-3">
           <ThemeToggle />
           <a
-            href="/myresume.pdf"
+            href={myresume}
             className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground hover:shadow-glow transition-all"
           target="_blank"
           rel="noreferrer"
