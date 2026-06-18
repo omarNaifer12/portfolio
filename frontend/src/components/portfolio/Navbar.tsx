@@ -90,20 +90,23 @@ export const Navbar = () => {
       {open && (
   <div className="md:hidden container mt-2 glass rounded-2xl p-4 flex flex-col gap-2">
     {links.map((l) => (
-      <a
+      <button
         key={l.href}
-        href={l.href}
-        onClick={() => setOpen(false)}
+        onClick={() =>  {
+          setOpen(false)
+          scrollToSection(l.href)
+          
+        }}
         className="px-4 py-3 rounded-xl hover:bg-secondary"
       >
         {l.label}
-      </a>
+      </button>
     ))}
 
     {/* Resume button — separated at the bottom */}
     <div className="mt-1 pt-3 border-t border-border">
       <a
-        href="/myresume.pdf"
+        href={myresume}
         target="_blank"
         rel="noreferrer"
         onClick={() => setOpen(false)}
